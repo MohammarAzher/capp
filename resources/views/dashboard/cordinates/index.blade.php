@@ -146,6 +146,10 @@ var table = $('#datatable').DataTable({
     scrollY: 300,
     ajax: {
         url: "{{ route('get_cordinates') }}",
+        method: 'post',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
     },
     columns: [
         { data: null, render: function(data, type, row, meta) {

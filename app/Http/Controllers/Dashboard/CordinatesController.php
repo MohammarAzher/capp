@@ -14,7 +14,7 @@ class CordinatesController extends Controller
         return view('dashboard.cordinates.index',['data'=>$data]);
     }
 
-    public function get_cordinates(){
+    public function get_cordinates(request $request){
 
         $query = Cordinate::query();
 
